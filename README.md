@@ -20,7 +20,7 @@ This application leverages cutting-edge generative language technology to provid
 - Seamless file uploads and previews.
 - An adaptive theme toggle for light and dark modes.
 
-It’s built with pure HTML, CSS, and JavaScript—making it lightweight yet powerful—while employing advanced features that set a new standard for chat interfaces.
+It’s built with pure HTML, CSS, and JavaScript—making it lightweight yet powerful—while employing advanced features for chat interfaces.
 
 ---
 
@@ -53,11 +53,11 @@ It’s built with pure HTML, CSS, and JavaScript—making it lightweight yet pow
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/sjbentley/llm_chatbot.git
+   git clone https://github.com/sjbentley/LLM-Chatbot.git
 
     Navigate to the Project Directory:
 
-   cd llm_chatbot
+   cd LLM-Chatbot
 
 Place Your API Key:
 
