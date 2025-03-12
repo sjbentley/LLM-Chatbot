@@ -7,9 +7,6 @@
 - [Features](#features)
 - [Architecture & Tech Stack](#architecture--tech-stack)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Overview
@@ -60,16 +57,17 @@ It’s built with pure HTML, CSS, and JavaScript—making it lightweight yet pow
 
     Navigate to the Project Directory:
 
-cd llm_chatbot
+   cd llm_chatbot
 
 Place Your API Key:
 
 The API key and URL are defined in script.js. You can update these values:
 
+```bash
 // In script.js
 const API_KEY = "YOUR_API_KEY_HERE";
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-
+```
 Open the Application:
 
 Simply open index.html in your web browser. Alternatively, you can serve the files using a simple HTTP server:
@@ -78,30 +76,16 @@ Simply open index.html in your web browser. Alternatively, you can serve the fil
 
     Then navigate to http://localhost:8080 (or whichever port is shown).
 
-## Usage
-
-    Chat Interaction: Type your query into the prompt input and press Enter or click the send button. For example, try asking for a Python script to retrieve ticker prices.
-
-    File Upload: Click the attach file button to upload a file. Uploaded files will be shown as a preview or as a file icon with the file name.
-
-    Theme Toggle: Click the theme toggle button to switch between light and dark modes.
 
 ## Project Structure
-
+```bash
 /frontend
   ├── index.html         # Main HTML file
   ├── style.css          # Stylesheet for the application
   ├── script.js          # JavaScript code for the chatbot functionality
   ├── favicon/           # Folder containing favicon images
   └── img/               # Folder containing additional images (e.g., avatars, logos)
-
-## Configuration
-
-    API Integration: The application sends chat history and user input to a generative language API. Update the API URL and key in script.js to match your API provider.
-
-    Theme and Preferences: User theme preferences are saved using local storage.
-
-    Copy Code Functionality: The code block handling function uses Prism.js for syntax highlighting. Make sure the Prism.js library is loaded via the <head> of your HTML file.
+```
 
 ## 🕸️ Snippets
 
