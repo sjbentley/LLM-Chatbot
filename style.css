@@ -1,0 +1,478 @@
+/* Importing Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Importing Google Fonts - Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-erif;
+}
+
+:root {
+    /* Dark theme colors */
+    --text-color: #edf3ff;
+    --subheading-color: #97a7ca;
+    --placeholder-color: #c3cdde;
+    --primary-color: #101623;
+    --secondary-color: #283045;
+    --secondary-hover-color: #333e58;
+    --scrollbar-color: #626a7f;
+}
+
+body.light-theme {
+    /* Light theme colors */
+    --text-color: #262626;
+    --subheading-color: #97a7ca;
+    --placeholder-color: #555555;
+    --primary-color: #ffffff;
+    --secondary-color: #f2f2f2;
+    --secondary-hover-color: #e5e5e5;
+    --scrollbar-color: #f2f2f2 transparent;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--primary-color);
+}
+
+.container {
+    overflow-y: auto;
+    padding: 32px 0 60px;
+    max-height: calc(100vh - 127px);
+    scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+.container :where(.app-header, .suggestions, .message, .prompt-wrapper) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+/* App Header Styling */
+.container .app-header {
+    margin-top: 4vh;
+}
+
+.app-header .heading {
+    font-size: 3rem;
+    width: fit-content;
+    background: linear-gradient(to right, #1d7efd, #8f6fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-header .sub-heading {
+    font-size: 2.6rem;
+    margin-top: -5px;
+    color: var(--subheading-color);
+}
+
+/* Suggestions list stylings */
+.container .suggestions {
+    display: none;
+    gap: 15px;
+    margin-top: 9.5vh;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+body.chats-active .container :where(.app-header, .suggestions) {
+   display: none; 
+}
+
+.suggestions .suggestions-item {
+    width: 228px;
+    padding: 18px;
+    flex-shrink: 0;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-radius: 12px;
+    background: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.suggestions .suggestions-item:hover {
+    background: var(--secondary-hover-color);
+}
+
+.suggestions .suggestions-item .text {
+    font-size: 1.1rem;
+}
+
+.suggestions .suggestions-item span {
+    height: 45px;
+    width: 45px;
+    margin-top: 35px;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #1d7efd;
+    background: var(--primary-color);
+}
+
+.suggestions .suggestions-item:nth-child(2) span {
+    color: #28a745;
+}
+
+.suggestions .suggestions-item:nth-child(3) span {
+    color: #ffc107;
+}
+
+.suggestions .suggestions-item:nth-child(4) span {
+    color: #6f42c1;
+}
+
+/* Chats container stylings */
+.container .chats-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.chats-container .message {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.chats-container .bot-message .avatar {
+    height: 43px;
+    width: 43px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-right: -7px;
+    border-radius: 50%;
+    background: #000000;
+/*  border: 1px solid var(--secondary-hover-color); */
+    overflow: hidden; /* Important: Clip the image to the circle */
+}
+
+.chats-container .bot-message.loading .avatar {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.chats-container .message .message-text {
+    padding: 3px 16px;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.chats-container .bot-message {
+    margin: 9px auto;
+}
+
+/* ============================= */
+/*   USER MESSAGES: TWO BUBBLES  */
+/* ============================= */
+
+/* Align user messages to the right, stacked vertically */
+.chats-container .user-message {
+    flex-direction: column;  
+    align-items: flex-end;
+    gap: 8px; /* space between text bubble & file bubble */
+}
+
+/* 1) Text bubble */
+.chats-container .user-message .message-text {
+    padding: 12px 16px;
+    max-width: 75%;
+    border-radius: 13px 13px 3px 13px;
+    background: var(--secondary-color);
+}
+
+/* 2) Image bubble */
+.chats-container .user-message .img-attachment {
+    width: 50%;
+    border-radius: 13px 13px 3px 13px;
+}
+
+/* 3) File bubble (icon + filename) */
+.chats-container .user-message .file-attachment {
+    width: auto;
+    border-radius: 13px 13px 3px 13px;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+    padding: 12px 16px;
+}
+
+/* Blue icon in the file bubble */
+.chats-container .user-message .file-attachment .material-symbols-rounded {
+    font-size: 1.2rem;
+    color: #1d7efd;
+}
+
+/* Prompt container styling */
+.prompt-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    background: var(--primary-color);
+}
+
+.prompt-container :where(.prompt-wrapper, .prompt-form, .prompt-actions) {
+    display: flex;
+    gap: 12px;
+    height: 56px;
+    align-items: center;
+}
+
+.prompt-wrapper .prompt-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 130px;
+    background: var(--secondary-color);
+}
+
+.prompt-form .prompt-input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding-left: 24px;
+    color: var(--text-color);
+}
+
+.prompt-form .prompt-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.prompt-wrapper button {
+    width: 56px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.prompt-wrapper :is(button:hover, .file-icon, cancel-file-btn) {
+    background: var(--secondary-hover-color);
+}
+
+.prompt-form .prompt-actions {
+    gap: 5px;
+    margin-right: 7px;
+}
+
+/* 
+   FILE UPLOAD WRAPPER:
+   - 45x45 area with:
+       #add-file-btn (paperclip),
+       .file-icon (document icon),
+       img (image preview),
+       #cancel-file-btn (red X).
+*/
+.prompt-wrapper .prompt-form :where(.file-upload-wrapper, button, img) {
+    position: relative;
+    height: 45px;
+    width: 45px;
+}
+
+/* Hide send btn unless user typed something */
+.prompt-form #send-prompt-btn {
+    color: #fff;
+    display: none;
+    background: #1d7efd;
+}
+
+.prompt-form .prompt-input:valid ~ .prompt-actions #send-prompt-btn {
+    display: block;
+}
+
+.prompt-form #send-prompt-btn:hover {
+    background: #0264e3;
+}
+
+/* Base hidden state for everything inside file-upload-wrapper */
+.prompt-form .file-upload-wrapper :where(button, img, .file-icon) {
+    position: absolute;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+}
+
+/* Default paperclip (center it) */
+.prompt-form .file-upload-wrapper #add-file-btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block; /* show paperclip by default */
+    z-index: 1;
+}
+
+/* Show the correct item once active + file or image is attached */
+.prompt-form .file-upload-wrapper.active #add-file-btn {
+    display: none; /* hide paperclip if there's an attachment */
+}
+
+/* For images, show the preview instead of the paperclip/file icon */
+.prompt-form .file-upload-wrapper.active.img-attached img {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    z-index: 2;
+}
+
+/* For file attachments, show the doc icon in the center */
+.prompt-form .file-upload-wrapper.active.file-attached .file-icon {
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #1d7efd;
+    z-index: 2;
+}
+
+/* Cancel (red X) button - top-right corner, only on hover */
+.prompt-form #cancel-file-btn {
+    top: -5px;
+    right: -5px;
+    color: #fff;
+    background: #d62939;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.prompt-form #stop-response-btn:hover {
+    color: #d62939;
+}
+
+.prompt-form .file-upload-wrapper.active:hover #cancel-file-btn {
+    display: flex;
+}
+
+/* If you have a separate .file-icon rule, keep it consistent. */
+.prompt-form .file-icon {
+    color: #1d7efd;
+}
+
+.prompt-form #stop-response-btn,
+body.bot-responding .prompt-form .file-upload-wrapper {
+    display: none;
+}
+
+body.bot-responding .prompt-form #stop-response-btn {
+    display: block;;
+}
+
+.prompt-container .disclaimer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 16px;
+    color: var(--placeholder-color);
+}
+
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 0 100px;
+    }
+
+    .app-header :is(.heading, .sub-heading) {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .prompt-form .file-upload-wrapper.active #cancel-file-btn {
+        opacity: 0;
+    }
+
+    .prompt-wrapper.hide-controls :where(#theme-toggle-btn, #delete-chats-btn) {
+        display: none;
+    }
+}    
+
+/* ==================================================== */
+/*              Code Block Styling for Chatbot          */
+/* ==================================================== */
+
+/* Style for pre and code blocks */
+pre {
+    background-color: #1e1e1e; /* Dark theme background */
+    color: #dcdcdc; /* Light text color */
+    padding: 16px; /* Padding around the code */
+    border-radius: 8px; /* Rounded corners */
+    overflow-x: auto; /* Horizontal scrolling */
+    font-family: 'Fira Code', monospace; /* Developer-friendly font */
+    white-space: pre-wrap; /* Ensure text wraps */
+    word-wrap: break-word; /* Handle long words */
+    margin: 20px 0; /* Add some space above and below the block */
+}
+
+code {
+    display: block;
+    font-size: 1rem; /* Adjust font size for readability */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+/* Syntax highlighting customization (if using a library like Prism.js) */
+code[class*="language-"] {
+    background: none; /* Ensure no additional background */
+    color: inherit; /* Inherit text color from parent */
+}
+
+/* Prism Syntax Highlighting Customization (for code blocks) */
+pre[class*="language-"] {
+    background-color: #2d2d2d; /* Darker background for code blocks */
+    color: #f8f8f2; /* Light text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* More padding */
+    overflow-x: auto; /* Ensure scrolling for long lines */
+    white-space: pre-wrap; /* Wrap lines to fit screen */
+}
+
+/* Scrollbar customization */
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+
