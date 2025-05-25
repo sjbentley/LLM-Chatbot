@@ -24,7 +24,7 @@
 ## Features
 
 - **Real-Time Conversational AI**  
-  Engage instantly with a powerful generative language model that responds intelligently in real time.
+  - Engage instantly with a powerful generative language model that responds intelligently in real time.
 
 - **Intelligent Code Block Handling**  
   - Automatically detects and formats Markdown-style code blocks  
@@ -32,13 +32,13 @@
   - Includes a one-click “Copy” button for effortless code reuse
 
 - **File Upload & Preview**  
-  Upload images or documents on the fly with instant previews — no page refresh needed
+  - Upload images or documents on the fly with instant previews — no page refresh needed
 
 - **Theme Toggle**  
-  Switch between light and dark mode to suit your environment and preference
+  - Switch between light and dark mode to suit your environment and preference
 
 - **Responsive & Adaptive UI**  
-  Optimized for both desktop and mobile devices with a clean, user-first interface
+  - Optimized for both desktop and mobile devices with a clean, user-first interface
 
 ---
 
