@@ -1,50 +1,55 @@
-# AI Chatbot: Next-Gen Conversational AI Experience
+<div align="center">
+  <h1>AI Chatbot: Next-Gen Conversational AI Experience</h1>
+  <p><strong>Unleashing a new paradigm in shipping with intelligent automation and unparalleled transparency.</strong></p>
+
+  [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  [![Prism.js](https://img.shields.io/badge/Prism.js-Blueviolet?logo=prism&logoColor=white)](https://prismjs.com/)
+  [![FileReader API](https://img.shields.io/badge/FileReader_API-FF6F00?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+  [![Gemini 1.5 Flash](https://img.shields.io/badge/Gemini_1.5_Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+
+</div>
+
 ---
 
-## Table of Contents
+## Welcome to the future of interactive communication.
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture & Tech Stack](#architecture--tech-stack)
-- [Installation](#installation)
-- [License](#license)
+**{BENTLEY}** is an advanced, innovative, and disruptive conversational AI application that delivers a next-generation chat experience through seamless integration of code intelligence, dynamic file uploads, and adaptive theming. Designed for developers and innovators, this project transforms ordinary chat interfaces into a powerful, multi-functional tool.
 
-## Overview
-
-Welcome to the future of interactive communication. **{BENTLEY}** is an advanced, innovative, and disruptive conversational AI application that delivers a next-generation chat experience through seamless integration of code intelligence, dynamic file uploads, and adaptive theming. Designed for developers and innovators, this project transforms ordinary chat interfaces into a powerful, multi-functional tool.
-
-This application leverages cutting-edge generative language technology to provide:
-
-- Instant responses with simulated typing effects.
-- Automatic formatting of code blocks with syntax highlighting.
-- Seamless file uploads and previews.
-- An adaptive theme toggle for light and dark modes.
-
-It’s built with pure HTML, CSS, and JavaScript—making it lightweight yet powerful—while employing advanced features for chat interfaces.
+![sirjahibentley® Screenshot](img/screenshot.png)
 
 ---
 
 ## Features
 
-- **Real-Time Conversational AI:** Engage with a state-of-the-art generative language model in real time.
-- **Intelligent Code Block Handling:** 
-  - Automatically detects Markdown-style code blocks.
-  - Formats code using `<pre><code>` tags with [Prism.js](https://prismjs.com/) for syntax highlighting.
-  - Provides an intuitive “Copy” button for easy code extraction.
-- **File Upload & Preview:** Attach images and documents on the fly with built-in preview functionality.
-- **Theme Toggle:** Switch seamlessly between dark and light modes to match your environment.
-- **Responsive & Adaptive UI:** Designed to work flawlessly on desktop and mobile, delivering a clean, modern experience.
+- **Real-Time Conversational AI**  
+  Engage instantly with a powerful generative language model that responds intelligently in real time.
+
+- **Intelligent Code Block Handling**  
+  - Automatically detects and formats Markdown-style code blocks  
+  - Syntax highlighting powered by [Prism.js](https://prismjs.com/)  
+  - Includes a one-click “Copy” button for effortless code reuse
+
+- **File Upload & Preview**  
+  Upload images or documents on the fly with instant previews — no page refresh needed
+
+- **Theme Toggle**  
+  Switch between light and dark mode to suit your environment and preference
+
+- **Responsive & Adaptive UI**  
+  Optimized for both desktop and mobile devices with a clean, user-first interface
 
 ---
 
-## Architecture & Tech Stack
+## Tech Stack
 
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript
-- **Syntax Highlighting:** [Prism.js](https://prismjs.com/)
-- **File Handling:** HTML5 FileReader API
-- **Generative Language API:** Gemini 1.5 Flash via Google’s Generative Language API
-- **State Management:** In-browser state and DOM manipulation
-- **Responsive Design:** Leveraging CSS Flexbox and Media Queries
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript  
+- **Syntax Highlighting:** [Prism.js](https://prismjs.com/)  
+- **File Handling:** HTML5 FileReader API  
+- **AI Integration:** Gemini 1.5 Flash via Google’s Generative Language API  
+- **State Management:** In-browser DOM manipulation  
+- **Responsive Design:** CSS Flexbox & Media Queries  
 
 ---
 
@@ -102,3 +107,7 @@ For further questions or feature requests, open an issue in the repository. 🚀
 ## License
 
 This project is licensed under the MIT License.
+
+---
+
+[Linktr.ee](https://linktr.ee/sirjahibentley) • [Tiktok](https://tiktok.com/@sirjahibentley) • [Instagram](https://instagram.com/sirjahibentley) • [Facebook](https://facebook.com/sirjahibentley)
